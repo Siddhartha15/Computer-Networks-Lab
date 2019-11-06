@@ -1,0 +1,1 @@
+sudo ip link set eno1 netns ns1

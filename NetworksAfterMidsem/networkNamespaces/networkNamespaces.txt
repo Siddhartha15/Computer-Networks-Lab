@@ -1,0 +1,63 @@
+------------CONTAINERS------------
+
+TO INSTALL LXC:
+	sudo apt-get install lxc lxc-templates -y
+
+TO CHECK THE CONFIGURATION
+	sudo lxc-checkconfig
+
+TO LIST READY-MADE TEMPLATES FOR CREATING LINUX CONTAINERS
+	ls /usr/share/lxc/templates/
+
+TO CREATE UBUNTU CONTAINER
+	sudo lxc-create -n new-container -t ubuntu
+
+TO LIST THE CREATED CONTAINERS
+	sudo lxc-ls
+
+TO START CONTAINER
+	sudo lxc-start -n new-container -d
+
+TO TAKE A CONSOLE OF THE CONTAINER
+	sudo lxc-console -n new-container
+
+****	USERNAME : ubuntu 	****
+****	PASSWORD : ubuntu 	****
+
+TO GET THE DETAILS OF THE RUNNING CONTAINER
+	sudo lxc-info -n new-container
+
+TO START AND STOP THE CONTAINER
+	lxc-start -n new-container
+	lxc-stop -n new-container
+
+TO PAUSE AND UNPAUSE
+	lxc-freeze -n new-container
+	lxc-unfreeze -n new-container
+
+TO DELETE THE CONTAINER
+	lxc-stop -n new-container
+	lxc-destroy -n new-container  
+
+------------CONTAINERS------------
+
+
+------------NETWORK NAMESPACES------------
+
+CREATING A NETWORK NAMESPACE
+	ip netns add <new namespace name>
+
+TO VERIFY THAT THE NETWORK NAMESPACE HAS BEEN CREATED
+	ip netns list
+
+TO RUN A NETWORK APPLICATION INSIDE THE NETWORK NAMESPACE
+	sudo ip netns exec saurabh ip link set dev lo up
+	sudo ip netns exec saurabh ping 127.0.0.1
+
+TO MOVE THE PHYSICAL NIC INTERFACE INSIDE THE NETWORK NAMESPACE
+	sudo ip link set [physical NIC name] netns [network-namesace-name]
+
+TO DESTROY AN EXISTING NETWORK NAMESPACE AFTER KILLING THE PROCESSES RUNNING INSIDE IT\
+	sudo ip [-all] netns delete [ NAME ]
+
+------------NETWORK NAMESPACES------------
