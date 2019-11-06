@@ -1,0 +1,243 @@
+/****************************************************************
+*****************************************************************
+*****************************************************************
+This CSS is taken from the office Stripe
+documentation at: https://stripe.com/docs/elements/examples
+Modified by NetBeez
+*****************************************************************
+*****************************************************************
+*****************************************************************/
+.nb-plan-option-selected {
+    background-color: #41f480;
+}
+
+.nb-stripe-form {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-variant: normal;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.nb-stripe-form form {
+    width: 600px;
+    margin: 20px 0;
+}
+
+.nb-stripe-form .group {
+    background: white;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10),
+                0 3px 6px 0 rgba(0,0,0,0.08);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 6px;
+}
+
+.nb-stripe-form .group .group {
+    box-shadow: none;
+    border: 1px solid #dddddd;
+}
+
+.nb-stripe-form .group .group:last-child {
+    margin-bottom: 0;
+}
+
+.nb-stripe-form label {
+    position: relative;
+    /*color: #8898AA;*/
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nb-stripe-form .group label:not(:last-child) {
+    border-bottom: 1px solid #F0F5FA;
+}
+
+.nb-stripe-form label > .full-span {
+    width: 100%!important;
+    text-align: left;
+    margin-left: 18px;
+}
+
+.nb-stripe-form .fluid-span {
+    width: auto;
+    max-width: 60px;
+}
+
+.nb-stripe-form label > .input-label,
+.nb-stripe-form label > span {
+    width: 140px;
+    text-align: right;
+    margin-right: 18px;
+}
+
+.nb-stripe-form .field {
+    background: transparent;
+    font-weight: 300;
+    /*color: #31325F;*/
+    outline: none;
+    flex: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: text;
+    margin: 4px 4px 4px 0!important;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+}
+
+/* override for theme styles messing up the tel input */
+.nb-stripe-form input[type="tel"].field {
+    padding: 10px!important;
+    border: 1px solid #dddddd!important;
+    font-size: 14px!important;
+}
+
+.nb-stripe-form input.field[disabled] {
+    border: none;
+}
+
+.nb-stripe-form .field::-webkit-input-placeholder { color: #CFD7E0; }
+.nb-stripe-form .field::-moz-placeholder { color: #CFD7E0; }
+
+.nb-stripe-form button {
+    /*float: left;
+    display: block;*/
+    background: #666EE8!important;
+    color: white!important;
+    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10),
+              0 3px 6px 0 rgba(0,0,0,0.08);
+    border-radius: 4px;
+    border: 0;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    text-shadow: none;
+}
+
+.nb-stripe-form button:focus {
+    background: #555ABF;
+}
+
+.nb-stripe-form button:active {
+    background: #43458B;
+}
+
+.nb-stripe-form .outcome {
+    float: left;
+    width: 100%;
+    padding-top: 8px;
+    min-height: 24px;
+    text-align: center;
+}
+
+.nb-stripe-form .success, .error {
+    display: none;
+    font-size: 13px;
+}
+
+.nb-stripe-form .success.visible, .error.visible {
+    display: inline;
+}
+
+.nb-stripe-form .error {
+    color: #E4584C;
+}
+
+.nb-stripe-form .success {
+    color: #666EE8;
+}
+
+.nb-stripe-form .success .token {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.nb-stripe-form .nb-valid-input {
+    background-color: #41f480!important; 
+    background: #41f480!important; 
+}
+
+.nb-stripe-form .nb-invalid-input {
+    background-color: red!important; 
+}
+
+.nb-stripe-form-button-container {
+    text-align: center;
+}
+
+.nb-stripe-form-shipping-notice {
+    margin-bottom: 20px;
+}
+
+#hardware_dropdown_toggle {
+    cursor: pointer;
+}
+
+#hardware_dropdown_toggle:hover {
+    background-color: #f7f7f7;
+}
+
+#hardware_dropdown_toggle:hover label {
+    cursor: pointer;
+}
+
+#hostname_loading_span {
+    position: absolute;
+    top: 6px;
+}
+
+.full-span {
+    width: 100%!important;
+    text-align: left;
+}
+
+#netbeez_plan_name,
+#add_wifi_subscription_plan {
+    width: 120px;
+}
+
+#add_wifi_subscription_plan {
+    position: relative;
+    top: 4px;
+    text-align: left;
+    margin: 8px;
+    height: 18px;
+    cursor: pointer;
+}
+
+#netbeez_plan_name {
+    font-weight: bold;
+}
+
+.nb-plan-invoice-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nb-plan-invoice-table th {
+    background-color: #ececec;
+}
+
+.nb-plan-invoice-table .grand-total-row {
+    border-top: 1px solid #aeaeae;
+}
+
+.nb-plan-invoice-table tr:nth-child(2n+1) {
+    background-color: #ffffff!important;
+}
+
+.nb-plan-invoice-table .grand-total-row td {
+    font-weight: bold;
+}
+
+
